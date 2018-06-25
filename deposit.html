@@ -32,7 +32,7 @@
 	</a>
 
 	<div>
-		<form action="showmodal();" class="w3-button w3-black" id="depositForm">
+		<form action="" class="w3-button w3-black" id="depositForm" onclick="showmodal()">
         	<input id="witdraw" type="number" onchange="setTwoNumberDecimal" min="500" max="20000" step="100" value="0.00"/>
 		</form>
 	</div>
@@ -62,8 +62,8 @@
 	function setTwoNumberDecimal(event) {
     	this.value = parseFloat(this.value).toFixed(2);
 	}
-	function showmodal(event) {
-		$("depositForm").on('submit', function(){
+	function showmodal() {
+		$("depositForm").on('submit', showmodal(){
    		$('.depositmodal').show();
 	}
 })
